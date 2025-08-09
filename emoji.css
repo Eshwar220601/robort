@@ -1,0 +1,269 @@
+ body{
+  background-image: url(theater-stage-with-red-curtains-spotlight_179637-164.avif);
+   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+ }
+ audio{
+  position: fixed;
+  margin-left: 1100px;margin-top: 600px;
+ }
+  *{
+    padding: 0px;
+    margin-top: 0px;
+   }
+   /* header{
+    background-image:radial-gradient(brown,rgb(163, 150, 150),rgb(129, 59, 59),rgb(117, 117, 74));
+   }   */
+    h1{
+        text-align: center;
+       padding-top: 40px;
+       color: yellow;
+        /* background-image:radial-gradient(brown,black); */
+    }
+    h1:hover{
+     cursor: pointer;
+     color:orange;
+      transition: 1s all ease;
+    }
+    
+    main{
+        display: flex;
+        justify-content: center;
+        margin-top:125px ;
+       
+
+    }
+    #face{
+        
+    background-image: linear-gradient(rgb(155, 91, 91),rgb(207, 123, 123),rgb(101, 95, 95));
+        height: 200px;
+        width: 200px;
+        border-radius:50%;
+        box-shadow: 0px 0px 15px 10px brown;
+        
+    }
+    #cap {
+        height: 35px;
+        width: 180px;
+         background-image: linear-gradient(brown,brown,white);
+        border-radius: 50%;
+        padding-left: 50px;
+        margin-left: -15px;
+        animation: danceBody 1s infinite ease-in-out;
+         box-shadow: 0px 0px 15px 10px brown;
+    }
+    #dot{
+        height: 90px;
+        width: 100px;
+         background-image: linear-gradient(brown, white,brown);
+        border-radius: 50px 50px 15px 15px;
+        padding-left: 50px;
+        margin-left: 22px;margin-top: -100px;
+        animation: danceBody 1s infinite ease-in-out;
+         box-shadow: 0px 0px 15px 10px brown;
+    }
+
+    #eyes{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 35px;
+        
+    }
+    #eye1{
+        height: 35px;
+        width: 35px;
+        background-color: white;
+        border-radius: 50%;
+        animation: blink 4s infinite;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 3px brown;
+    }
+    
+
+    #eye2{
+        height: 35px;
+        width: 35px;
+        background-color:white;
+        border-radius: 50%;
+        animation: blink 4s infinite;
+  overflow: hidden;
+   box-shadow: 0px 0px 15px 3px brown;
+    }
+    #iris1{
+        height: 18px;
+        width: 15px;
+        background-color:black;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 10px;
+        animation: lookAround 3s infinite;
+        
+    }
+    #iris2{
+        height: 18px;
+        width: 15px;
+        background-color:black;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 10px;   
+        animation: lookAround 3s infinite;
+    }
+    #tongue{
+        height: 20px;
+        width: 50px;
+        background-color: black;
+        border-radius: 0% 0% 50% 50%;
+        margin-left: 80px;
+        margin-top: 40px;
+        animation: tongueWobble 1s infinite ease-in-out;
+    }
+    #teeth{
+        height: 35px;
+        width: 25px;
+        background-color: red;
+        border-radius: 0% 0% 50% 50%;
+        margin-left: 13px;
+        margin-top: 0px;
+        
+ 
+    }
+  
+
+#body {
+    height: 190px;          
+    width: 150px;          
+    background-image: linear-gradient(rgb(194, 105, 105),rgb(102, 38, 38),rgb(80, 50, 50)); /* Same as face */
+    border-radius: 50px;    
+    margin: 0 auto;        
+    margin-top: 35px;     
+     box-shadow: 0px 0px 15px 1px brown; 
+     animation: danceBody 1s infinite ease-in-out;
+     
+}
+.hand {
+    position: absolute;
+    height: 1000px;
+    width: 200px;
+    background-image: linear-gradient(rgb(165, 100, 100),rgb(72, 65, 65),rgb(219, 174, 174));
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px #555;
+    top: 260px; /* Adjust based on your body position */
+     box-shadow: 0px 0px 15px 10px brown;
+}
+
+.left-hand {
+    left: calc(0% - 100px); 
+ animation: handDance 0.2s infinite alternate;
+  box-shadow: 0px 0px 15px 10px brown;
+}
+
+.right-hand {
+    /* left: calc(50% + 75px);  */
+    animation: handDance 0.2s infinite alternate-reverse;
+     box-shadow: 0px 0px 15px 10px brown;
+}
+
+.legs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -480px;
+    position: relative;
+    top: 470px; /* Adjust this based on your layout */
+}
+
+.leg {
+    width: 30px;
+    height: 100px;
+   background-image: linear-gradient(rgb(165, 100, 100),rgb(72, 65, 65),rgb(219, 174, 174));
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px #444;
+}
+
+.left-leg {
+  animation: legDanceLeft 0.3s infinite ease-in-out;
+}
+
+.right-leg {
+  animation: legDanceRight 0.3s infinite ease-in-out;
+}
+
+/* === ANIMATIONS === */
+@keyframes danceBody {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-5px); }
+  0%{transform: rotate(10deg);}
+}
+
+@keyframes handDance {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  0%{transform: rotate(30deg);}
+}
+
+@keyframes legDanceLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes legDanceRight {
+  0%, 100% { transform: translateY(10px); }
+  50% { transform: translateY(0); }
+}
+@keyframes handDance {
+  0%, 100% {
+    transform: translateY(0);}
+    0%{transform:rotate(50deg)
+  }
+  50% {
+    transform: translateY(-20px); /* Move hand up */
+  }
+}
+
+/* Common hand styles */
+.hand {
+  position: absolute;
+  height: 100px;
+  width: 25px;
+  background-image: linear-gradient(rgb(165, 100, 100), rgb(72, 65, 65), rgb(219, 174, 174));
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px #555;
+  top: 460px;
+}
+
+/* Left hand dances with regular timing */
+.left-hand {
+  left: calc(50% - 100px);
+  animation: handDance 0.3s infinite alternate;
+ 
+}
+
+/* Right hand dances opposite (reverse timing) */
+.right-hand {
+  left: calc(50% + 75px);
+  animation: handDance 0.3s infinite alternate-reverse;
+}
+/* Blinking effect (scaling the eye vertically) */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); } /* squint */
+}
+
+/* Looking side-to-side effect for irises */
+@keyframes lookAround {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+}
+@keyframes tongueWobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+}
+
